@@ -1,0 +1,7 @@
+replicaCount: 1 # 这里就是副本数，改这里提交github，argo自动更新
+image:
+  repository: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/nginx
+  tag: 1.25-alpine
+service:
+  type: ClusterIP
+  port: 80
