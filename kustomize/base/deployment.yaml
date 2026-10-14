@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-kust
-  namespace: kust-nginx
+ # namespace: kust-nginx
 spec:
   replicas: 3
   selector:
