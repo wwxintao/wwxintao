@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-kust
+  namespace: kust-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-kust
+  template:
+    metadata:
+      labels:
+        app: nginx-kust
+    spec:
+      containers:
+      - name: nginx
+        image: swr.cn-north-4.myhuaweicloud.com/ddn-k8s/docker.io/nginx:1.25-alpine
+        ports:
+        - containerPort: 80
